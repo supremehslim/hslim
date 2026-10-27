@@ -1,0 +1,18 @@
+{
+  "mailbox_login": "",
+  "poll_seconds": 120,
+  "initial_lookback_hours": 0,
+  "subject_keywords": [
+    "견적",
+    "quotation",
+    "rfq",
+    "가격 문의"
+  ],
+  "extractor": "auto",
+  "openai_model": "gpt-4.1-mini",
+  "search_pages": 2,
+  "margin_mode": "markup",
+  "margin_percent": 10,
+  "search_price_vat": "unknown",
+  "signature": "임현섭 부장\n주식회사 제이앤지시스템\n메일: hslim@jngsystem.co.kr\n연락처: 010-5095-5512 / 02-3444-3572"
+}
