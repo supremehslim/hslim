@@ -1,0 +1,21 @@
+$ python -m unittest discover -s tests -v
+test_exact_match_and_search (test_automation.Tests.test_exact_match_and_search) ... ok
+test_extraction_and_recipient (test_automation.Tests.test_extraction_and_recipient) ... ok
+test_graph_no_send_and_origin (test_automation.Tests.test_graph_no_send_and_origin) ... ok
+test_margin_and_tax (test_automation.Tests.test_margin_and_tax) ... ok
+test_resume_idempotency (test_automation.Tests.test_resume_idempotency) ... 작업 d48556a60fb858ec3a118a6f 실패 (ServiceError)
+ok
+test_workbook (test_automation.Tests.test_workbook) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.233s
+
+OK
+
+exit=0
+
+$ python -m quote_automation demo
+데모 생성 완료: /workspace/hslim/outlook-quote-automation/runtime/demo
+검산: Python Decimal 계산 + 저장 파일 수식·캐시 재열람 검산 True
+
+exit=0
