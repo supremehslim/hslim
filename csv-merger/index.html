@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>모아 · CSV 파일 합치기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="./"><span class="brand-icon">▥</span> 모아<span class="brand-sub">CSV MERGER</span></a><span class="privacy"><i></i> 파일은 브라우저 안에서만 처리돼요</span></header>
+<main>
+  <div class="eyebrow">작은 파일들을, 하나의 데이터로</div>
+  <h1>CSV 파일, 한 번에 <span>모아.</span></h1>
+  <p class="intro">여러 파일을 순서대로 이어 붙이고, 하나의 CSV로 내려받으세요.</p>
+  <div class="workspace">
+    <section class="panel input-panel">
+      <div class="section-heading"><h2><span class="step">01</span> 합칠 파일</h2><span id="file-count" class="badge">0개 선택</span></div>
+      <label class="dropzone" id="dropzone" for="file-input"><span class="upload-icon">↥</span><strong>CSV 파일을 여기에 놓아주세요</strong><span>또는 클릭해서 파일 선택</span><small>CSV 형식 · 여러 파일 선택 가능</small></label>
+      <input id="file-input" type="file" accept=".csv,text/csv" multiple hidden>
+      <div class="sample-row"><span>첨부한 파일로 시작할까요?</span><button id="samples" class="text-button">예제 4개 불러오기 ↗</button></div>
+      <div class="list-heading"><span>파일명 순서로 합쳐져요</span><button id="clear" class="text-button muted" disabled>전체 지우기</button></div>
+      <ul id="files"></ul>
+      <div id="empty-files" class="empty-files">아직 선택한 파일이 없어요.</div>
+      <div class="merge-note"><span>ⓘ</span><p>같은 열을 가진 파일을 합칩니다.<br>첫 행의 헤더는 한 번만 포함하고, 중복 데이터는 그대로 유지해요.</p></div>
+      <button id="merge" class="primary" disabled>파일 합치기 <span>→</span></button>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel result-panel">
+      <div class="section-heading"><h2><span class="step">02</span> 결과 미리보기</h2><span class="badge green" id="result-badge">준비 중</span></div>
+      <div id="result-empty" class="result-empty"><div class="sheet-icon">▤</div><h3>합쳐진 데이터가 여기에 표시돼요</h3><p>왼쪽에서 파일을 선택한 뒤<br>‘파일 합치기’를 눌러주세요.</p><span class="placeholder-lines">━━━━━━━━<br>━━━━━━━━<br>━━━━━</span></div>
+      <div id="result" hidden><div class="stats"><div><span>합친 파일</span><strong id="total-files"></strong></div><div><span>전체 데이터</span><strong id="total-rows"></strong></div><div><span>열 개수</span><strong id="total-cols"></strong></div></div><div class="table-wrap"><table id="preview"></table></div><p class="preview-note" id="preview-note"></p></div>
+      <div class="download-area"><div><strong>하나의 파일로, 깔끔하게.</strong><p>한글이 깨지지 않는 UTF-8 CSV로 저장돼요.</p></div><button id="download" disabled>↓ CSV 다운로드</button></div>
+    </section>
+  </div>
+  <footer><span>파일 선택 <b>→</b> 데이터 합치기 <b>→</b> CSV 다운로드</span><span>설치 없이, 업로드 없이, 간편하게.</span></footer>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
